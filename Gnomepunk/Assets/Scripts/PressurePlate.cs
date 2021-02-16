@@ -8,12 +8,14 @@ public class PressurePlate : MonoBehaviour
     public int requiredAmount;
     public int currentAmount;
 
+    public bool toggle = false;
+
     public UnityEvent enableTriggerEvent;
     public UnityEvent disableTriggerEvent;
 
-    public bool isActivated = false;
+    private bool isActivated = false;
 
-    public GameObject plate;
+    private GameObject plate;
     private Vector3 targetPosition;
     private float plateHeight = 0.2f;
     private int state = 0;
@@ -45,7 +47,7 @@ public class PressurePlate : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Gnome") || other.gameObject.CompareTag("Box"))
+        if (other.gameObject.CompareTag("Gnome") || other.gameObject.CompareTag("Box") && !toggle)
         {
             currentAmount--;
 
