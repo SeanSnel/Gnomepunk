@@ -20,7 +20,6 @@ public class BridgeControl : MonoBehaviour
     {
         _startLocation = transform.position;
         _startRotation = transform.rotation.eulerAngles;
-        TriggerBridge();
     }
 
     public void TriggerBridge()
