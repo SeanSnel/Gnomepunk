@@ -37,7 +37,8 @@ public class BridgeControl : MonoBehaviour
 
     private void RotateBridge(Vector3 targetRotation)
     {
-        StartCoroutine(RotateBridgeTo(targetRotation));
+        StopCoroutine(nameof(RotateBridgeTo));
+        StartCoroutine(nameof(RotateBridgeTo), targetRotation);
     }
 
     private IEnumerator RotateBridgeTo(Vector3 targetAngle)
@@ -52,6 +53,7 @@ public class BridgeControl : MonoBehaviour
 
     private void SlideOpen(Vector3 movementVector)
     {
+        StopCoroutine(nameof(MoveBridgeTo));
         Vector3 targetLocation = transform.position + movementVector;
         StartCoroutine(MoveBridgeTo(targetLocation));
     }
@@ -67,11 +69,13 @@ public class BridgeControl : MonoBehaviour
 
     public void RotateBack()
     {
-        StartCoroutine(RotateBridgeTo(_startRotation));
+        StopCoroutine(nameof(RotateBridgeTo));
+        StartCoroutine(nameof(RotateBridgeTo), _startRotation);
     }
 
     public void MoveBack()
     {
-        StartCoroutine(MoveBridgeTo(_startLocation));
+        StopCoroutine(nameof(MoveBridgeTo));
+        StartCoroutine(nameof(MoveBridgeTo), _startLocation);
     }
 }
