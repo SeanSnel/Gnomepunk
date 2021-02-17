@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -9,14 +8,6 @@ public class Lift : MonoBehaviour
 
     private const float PRECISION = 0.02f;
     private int _nextHeightIndex = 0;
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            MoveLift();
-        }
-    }
 
     public void MoveLift()
     {
