@@ -23,6 +23,11 @@ public class GnomeMover : MonoBehaviour, IExplodable
         MaxSpeedSqr = Mathf.Pow(maxSpeed, 2);
     }
 
+    void OnValidate()
+    {
+        MaxSpeedSqr = Mathf.Pow(maxSpeed, 2);
+    }
+
     public void RunAwayFrom(Vector3 position, float radius)
     {
         float distance = Vector3.Distance(rb.position, position);

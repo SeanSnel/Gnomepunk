@@ -3,13 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExplosionCursor : MonoBehaviour
+public class ExplosionCursor : GameCursor
 {
-    private Camera cam;
-    private const float RAYCAST_DISTANCE = 100f;
-    public LayerMask backplaneMask;
-    public LayerMask explodableMask;
-
     public float explosionRadius = 5f;
     public float maxExplosionForce = 20f;
     public float minChargeTime = 1 / 3;
@@ -20,11 +15,11 @@ public class ExplosionCursor : MonoBehaviour
     private Material chargerMaterial;
 
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
-        cam = Camera.main;
         charger = GameObject.Find("Charger").transform;
         chargerMaterial = charger.GetComponent<Renderer>().material;
+        base.Start();
     }
 
     void Update()
@@ -78,7 +73,7 @@ public class ExplosionCursor : MonoBehaviour
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit, RAYCAST_DISTANCE, backplaneMask))
         {
-            Collider[] explodables = Physics.OverlapSphere(hit.point, explosionRadius, explodableMask);
+            Collider[] explodables = Physics.OverlapSphere(hit.point, explosionRadius, interactsWithLayers);
             for (int i = 0; i < explodables.Length; i++)
             {
                 IExplodable explodable = explodables[i].GetComponent<IExplodable>();
