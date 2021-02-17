@@ -5,27 +5,33 @@ using UnityEngine;
 public class Ventilator : MonoBehaviour
 {
     // Hoe hoger de dampening hoe sneller de "collided iets" op de y as van de ventilator collider blijft hangen
-    float m_damping = 1f; 
-    float m_fanForce = 20f;
+    private float m_damping; 
+    private float m_fanForce;
+    private Collider m_Collider;
     
-    // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        m_damping = 1f;
+        m_fanForce = 20f;
+        m_Collider = GetComponent<Collider>();
     }
     
-    public void OnTriggerStay(Collider _other)
+    public void turnOn()
     {
-        Vector3 velocity =  _other.GetComponent<Rigidbody>().velocity;
+        m_Collider.enabled = true;
+    }
+
+    public void turnOff()
+    {
+        m_Collider.enabled = false;
+    }
+    
+    private void OnTriggerStay(Collider collided)
+    {
+        Vector3 velocity = collided.GetComponent<Rigidbody>().velocity;
         velocity += transform.up * m_fanForce * Time.deltaTime; 
         velocity -= velocity * m_damping * Time.deltaTime;
-        _other.GetComponent<Rigidbody>().velocity = velocity;
+        collided.GetComponent<Rigidbody>().velocity = velocity;
     }
 
 }
