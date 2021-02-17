@@ -53,7 +53,7 @@ MonoBehaviour:
   interactsWithLayers:
     serializedVersion: 2
     m_Bits: 128
-  pushRadius: 3
+  pushRadius: 2
 --- !u!114 &3641873533406031740
 MonoBehaviour:
   m_ObjectHideFlags: 0
