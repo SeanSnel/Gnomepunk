@@ -15,11 +15,11 @@ GameObject:
   - component: {fileID: 9141586384179698467}
   - component: {fileID: 7960607110331682546}
   m_Layer: 0
-  m_Name: cavecliff_1 (1)
+  m_Name: cavecliff_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7933108123916112896
 Transform:
