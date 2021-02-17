@@ -54,19 +54,15 @@ public class IntroCamera : MonoBehaviour
 
     IEnumerator handleReset()
     {
-        Debug.Log("Reset!");
         changing = true;
         fadeOut = true;
-        Debug.Log("fade to black");
 
         yield return new WaitForSeconds(fadeDuration);
         transparency = 1.0f;
-        Debug.Log("Reset Position");
         cam.transform.position = beginPos;
         targetPos = beginPos;
         fadeOut = false;
         fadeIn = true;
-        Debug.Log("fade to screen");
 
         yield return new WaitForSeconds(fadeDuration);
         transparency = 0.0f;
