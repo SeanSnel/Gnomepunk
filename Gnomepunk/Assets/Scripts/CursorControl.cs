@@ -18,7 +18,7 @@ public class CursorControl : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetMouseButtonDown(1))
         {
             CycleState();
         }
