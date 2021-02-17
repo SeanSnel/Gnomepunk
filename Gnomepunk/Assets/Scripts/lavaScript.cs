@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class lavaScript : MonoBehaviour
+public class LavaScript : MonoBehaviour
 {
     public float lavaStartDelay = 10.0f;
     public float lavaRaisingSpeed = 0.1f;
@@ -12,27 +12,30 @@ public class lavaScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        startPos = this.gameObject.transform.position;
-        Invoke("startLava", lavaStartDelay);
+        startPos = transform.position;
+        Invoke(nameof(StartLava), lavaStartDelay);
     }
 
-    private void startLava() {
+    private void StartLava()
+    {
         isRaising = true;
     }
 
-    public void stopLava() {
+    public void StopLava()
+    {
         isRaising = false;
     }
 
-    public void resetLava() {
-        this.gameObject.transform.position = startPos;
+    public void ResetLava()
+    {
+        transform.position = startPos;
     }
 
     void Update()
     {
         if (isRaising)
         {
-            this.gameObject.transform.position += Vector3.up * (lavaRaisingSpeed/100);
+            transform.position += Vector3.up * (lavaRaisingSpeed / 100);
         }
     }
 }
