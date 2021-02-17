@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -7,7 +6,6 @@ public class Lift : MonoBehaviour
     [SerializeField] private float movementSpeed = 1;
     [SerializeField] private float[] liftHeights;
  
-    private Rigidbody _rigidbody;
     private const float PRECISION = 0.02f;
     private int _nextHeightIndex = 0;
 
