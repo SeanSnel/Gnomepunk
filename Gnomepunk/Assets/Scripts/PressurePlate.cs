@@ -47,7 +47,7 @@ public class PressurePlate : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Gnome") || other.gameObject.CompareTag("Box") && !toggle)
+        if ((other.gameObject.CompareTag("Gnome") || other.gameObject.CompareTag("Box")) && !toggle)
         {
             currentAmount--;
 
