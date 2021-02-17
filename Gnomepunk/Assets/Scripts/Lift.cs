@@ -1,13 +1,22 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
 public class Lift : MonoBehaviour
 {
-    [SerializeField] private float movementSpeed = 1;
+    [SerializeField] private float movementTime = 3f;
     [SerializeField] private float[] liftHeights;
- 
+
     private const float PRECISION = 0.02f;
     private int _nextHeightIndex = 0;
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            MoveLift();
+        }
+    }
 
     public void MoveLift()
     {
@@ -26,14 +35,21 @@ public class Lift : MonoBehaviour
 
     private IEnumerator MoveLiftToLocation(Vector3 targetLocation)
     {
-        while (transform.position != targetLocation)
+        float elapsedTime = 0;
+        Vector3 startLocation = transform.position;
+        while (elapsedTime <= movementTime)
         {
-            transform.position = Vector3.Lerp(transform.position, targetLocation, Time.deltaTime * movementSpeed);
+            elapsedTime += Time.deltaTime;
+            float interpolationPoint = elapsedTime / movementTime;
+            transform.position = Vector3.Lerp(startLocation, targetLocation, interpolationPoint);
             if (Vector3.Distance(transform.position, targetLocation) <= PRECISION)
             {
                 transform.position = targetLocation;
             }
+
             yield return null;
         }
+
+        transform.position = targetLocation;
     }
 }
