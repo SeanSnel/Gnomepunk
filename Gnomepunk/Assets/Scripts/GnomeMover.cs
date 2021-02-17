@@ -9,18 +9,12 @@ public class GnomeMover : MonoBehaviour, IExplodable
 {
     private Rigidbody rb;
 
-
+    [Tooltip("Acceleration to use when using the push cursor")]
     public float acceleration = 5;
+    [Tooltip("Max walking speed when using the push cursor")]
     public float maxSpeed = 2;
     public float MaxSpeedSqr { get; private set; }
     public LayerMask gnomeMask = 0;
-    public float overlapRadius;
-    public float overlapFactor;
-
-    [HideInInspector]
-    public float xPos;
-    [HideInInspector]
-    public float yPos;
 
 
     void Start()
@@ -47,7 +41,7 @@ public class GnomeMover : MonoBehaviour, IExplodable
     {
         UnlockRigidbody();
         rb.AddExplosionForce(centerForce, centerPosition, radius, .5f, ForceMode.Impulse);
-        //rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, 0);
+        rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, 0);
         StopCoroutine(nameof(Recover));
         StartCoroutine(nameof(Recover));
     }
