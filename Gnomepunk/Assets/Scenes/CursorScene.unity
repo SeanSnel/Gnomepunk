@@ -666,7 +666,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 34866131c787e5842926a3dec1fb8bc4, type: 2}
+  - {fileID: 2100000, guid: 3947e4f8a8bffe145a950ad3a7b66579, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -786,9 +786,9 @@ MonoBehaviour:
   backplaneMask:
     serializedVersion: 2
     m_Bits: 64
-  explodables:
+  explodableMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
   explosionRadius: 5
   maxExplosionForce: 20
   minChargeTime: 0.5
@@ -1034,7 +1034,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 34866131c787e5842926a3dec1fb8bc4, type: 2}
+  - {fileID: 2100000, guid: 425ae6beac2e4f74aab56343425e39ac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1224,7 +1224,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 34866131c787e5842926a3dec1fb8bc4, type: 2}
+  - {fileID: 2100000, guid: 3947e4f8a8bffe145a950ad3a7b66579, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
