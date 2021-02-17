@@ -36,6 +36,7 @@ public class PushCursor : MonoBehaviour
         }
     }
 
+#if UNITY_EDITOR
     void OnDrawGizmos()
     {
         if (Input.GetMouseButton(0))
@@ -50,4 +51,5 @@ public class PushCursor : MonoBehaviour
         }
 
     }
+#endif
 }

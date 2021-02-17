@@ -1,10 +1,14 @@
+using System;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-public class GnomeMover : MonoBehaviour
+public class GnomeMover : MonoBehaviour, IExplodable
 {
     private Rigidbody rb;
+
 
     public float acceleration = 5;
     public float maxSpeed = 2;
@@ -18,15 +22,11 @@ public class GnomeMover : MonoBehaviour
     [HideInInspector]
     public float yPos;
 
-    [Header("--- DEBUG (DO NOT EDIT) ---")]
-    // [HideInInspector]
-    public float zPriority;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         MaxSpeedSqr = Mathf.Pow(maxSpeed, 2);
-        zPriority = Random.value - 0.5f;
     }
 
     public void RunAwayFrom(Vector3 position, float radius)
@@ -43,21 +43,37 @@ public class GnomeMover : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    public void Explode(Vector3 centerPosition, float centerForce, float radius)
     {
-        Collider[] gnomes = Physics.OverlapSphere(transform.position, overlapRadius, gnomeMask);
-        if (gnomes.Length > 0)
+        UnlockRigidbody();
+        rb.AddExplosionForce(centerForce, centerPosition, radius, .5f, ForceMode.Impulse);
+        //rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, 0);
+        StopCoroutine(nameof(Recover));
+        StartCoroutine(nameof(Recover));
+    }
+
+    private IEnumerator Recover()
+    {
+        do
         {
-            for (int i = 0; i < gnomes.Length; i++)
-            {
+            yield return null;
+        } while (!rb.IsSleeping());
 
-            }
-        }
-        else
-        {
+        yield return new WaitForSeconds(0.25f);
 
-        }
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+        transform.rotation = Quaternion.identity;
+        LockRigidbody();
+    }
 
+    private void UnlockRigidbody()
+    {
+        rb.constraints = RigidbodyConstraints.None;
+    }
+
+    private void LockRigidbody()
+    {
+        rb.constraints = RigidbodyConstraints.FreezeRotation;
     }
 
 
