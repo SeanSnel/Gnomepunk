@@ -1,6 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
+using Vector3 = UnityEngine.Vector3;
 
 public class CameraControl : MonoBehaviour
 {
@@ -8,19 +8,22 @@ public class CameraControl : MonoBehaviour
     public float verticalSpeed = 0.1f;
     public float animTime = 10f;
 
-    private GameObject camera;
-    private Vector3 targetPos;
+    private GameObject _cam;
+    private Vector3 _targetPos;
 
-    void Start()
+    private void Start()
     {
-        camera = this.gameObject;
-        targetPos = camera.transform.position;
+        _cam = this.gameObject;
+        _targetPos = _cam.transform.position;
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        targetPos += new Vector3(Input.GetAxis("Horizontal") * horizontalSpeed, Input.GetAxis("Vertical") * verticalSpeed, 0);
-        camera.transform.position = Vector3.Lerp(camera.transform.position, targetPos, (animTime * Time.deltaTime));
+        Vector3 horizontalMovement = transform.right * (Input.GetAxis("Horizontal") * horizontalSpeed);
+        Vector3 verticalMovement = transform.up * (Input.GetAxis("Vertical") * verticalSpeed);
+
+        _targetPos = horizontalMovement + verticalMovement + transform.position;
+        _cam.transform.position = Vector3.Lerp(_cam.transform.position, _targetPos, (animTime * Time.deltaTime));
     }
 }
