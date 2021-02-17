@@ -9,11 +9,6 @@ public class Lift : MonoBehaviour
     private const float PRECISION = 0.02f;
     private int _nextHeightIndex = 0;
 
-    public void Start()
-    {
-        _rigidbody = GetComponent<Rigidbody>();
-    }
-
     public void MoveLift()
     {
         if (liftHeights.Length < _nextHeightIndex + 1)
