@@ -16,14 +16,6 @@ public class Lift : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            MoveLift();
-        }
-    }
-
     public void MoveLift()
     {
         if (liftHeights.Length < _nextHeightIndex + 1)
