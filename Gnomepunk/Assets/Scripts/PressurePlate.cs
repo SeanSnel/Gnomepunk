@@ -17,7 +17,7 @@ public class PressurePlate : MonoBehaviour
 
     private GameObject plate;
     private Vector3 targetPosition;
-    private float plateHeight = 0.2f;
+    private float plateHeight = 0.15f;
     private int state = 0;
 
     void Start()
