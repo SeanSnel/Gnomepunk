@@ -465,5 +465,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sean's level 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5974867392990224957, guid: 515c1c01b5c780c4398ae8b37cdf4b6d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5974867392990224957, guid: 515c1c01b5c780c4398ae8b37cdf4b6d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.17
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 515c1c01b5c780c4398ae8b37cdf4b6d, type: 3}
