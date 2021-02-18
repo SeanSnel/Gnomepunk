@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class lavaCollisionScript : MonoBehaviour
+public class LavaCollisionScript : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {
