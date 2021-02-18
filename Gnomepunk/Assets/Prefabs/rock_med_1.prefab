@@ -15,11 +15,11 @@ GameObject:
   - component: {fileID: 1568832597612681666}
   - component: {fileID: 2292420323419204399}
   m_Layer: 0
-  m_Name: rock_med_1 1
+  m_Name: rock_med_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7545441110994709460
 Transform:
