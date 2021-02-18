@@ -22,7 +22,7 @@ public class PressurePlate : MonoBehaviour
 
     void Start()
     {
-        plate = this.gameObject.transform.GetChild(0).gameObject;
+        plate = transform.GetChild(0).gameObject;
         targetPosition = plate.transform.position;
     }
 
@@ -66,6 +66,9 @@ public class PressurePlate : MonoBehaviour
 
     void Update()
     {
-        plate.transform.position = Vector3.Lerp(plate.transform.position, targetPosition, 2 * Time.deltaTime);
+        if (plate != null)
+        {
+            plate.transform.position = Vector3.Lerp(plate.transform.position, targetPosition, 2 * Time.deltaTime);
+        }
     }
 }
