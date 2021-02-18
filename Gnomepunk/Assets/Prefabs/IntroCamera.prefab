@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2711067874249040166}
   - component: {fileID: 2711067874249040171}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: IntroCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,12 +97,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f57f3670b38cb2147be24e6fca85bf6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.001
-  animTime: 10
-  distance: 5
+  speed: 1
+  distance: 10
   fadeDuration: 4
   plane: {fileID: 2711067875320984459}
-  trancsparencyStep: 0.001
 --- !u!1 &2711067875320984459
 GameObject:
   m_ObjectHideFlags: 0

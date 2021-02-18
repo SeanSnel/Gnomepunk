@@ -4,69 +4,72 @@ using UnityEngine;
 
 public class IntroCamera : MonoBehaviour
 {
-    public float speed = 0.001f;
-    public float distance = 10;
-    public float fadeDuration = 4.0f;
+    public float speed = 1f;
+    public float distance = 10f;
+    public float fadeDuration = 2.0f;
 
-    private GameObject cam;
-    private Vector3 targetPos;
     private Vector3 beginPos;
-    private bool fadeOut = false;
-    private bool fadeIn = false;
     public GameObject plane;
-    private float transparency = 0.0f;
-    public float trancsparencyStep = 0.001f;
-    private bool changing = false;
+
+    private Material material;
 
     void Start()
     {
-        cam = this.gameObject;
-        targetPos = cam.transform.position;
-        beginPos = cam.transform.position;
-        plane.GetComponent<MeshRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, transparency);
+        beginPos = transform.position;
+        material = plane.GetComponent<MeshRenderer>().material;
+        material.color = new Color(0, 0, 0, 1);
+        StartCoroutine(nameof(ScreenPass));
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator ScreenPass()
     {
-        targetPos += new Vector3(speed, 0, 0);
-        cam.transform.position = targetPos;
-        if (transform.position.x + 1 >= distance && !changing)
+        while (true)
         {
-            StartCoroutine(handleReset());
-        }
+            StartCoroutine(nameof(FadeIn));
 
-        if (fadeIn)
-        {
-            plane.GetComponent<MeshRenderer>().material.color = new Color(0.0f, 0.0f, 0.0f, transparency);
-            if (transparency > 0)
+            while (transform.position.x <= (beginPos.x + distance) - speed * fadeDuration)
             {
-                transparency -= trancsparencyStep;
-            }            
-        }
+                transform.position += transform.right * speed * Time.deltaTime;
+                yield return null;
+            }
 
-        if (fadeOut)
-        { 
-            plane.GetComponent<MeshRenderer>().material.color = new Color(0.0f, 0.0f, 0.0f, transparency);
-            transparency += trancsparencyStep;
+            StartCoroutine(nameof(FadeOut));
+
+            float timer = 0;
+            while (timer <= fadeDuration)
+            {
+                transform.position += transform.right * speed * Time.deltaTime;
+                timer += Time.deltaTime;
+                yield return null;
+            }
+            transform.position = beginPos;
+            yield return null;
         }
     }
 
-    IEnumerator handleReset()
+    IEnumerator FadeIn()
     {
-        changing = true;
-        fadeOut = true;
+        float timer = 0;
+        while (material.color.a >= 0)
+        {
+            float alpha = Mathf.Lerp(1, 0, timer / fadeDuration);
+            material.color = new Color(0, 0, 0, alpha);
+            timer += Time.deltaTime;
+            yield return null;
+        }
+        material.color = new Color(0, 0, 0, 0);
+    }
 
-        yield return new WaitForSeconds(fadeDuration);
-        transparency = 1.0f;
-        cam.transform.position = beginPos;
-        targetPos = beginPos;
-        fadeOut = false;
-        fadeIn = true;
-
-        yield return new WaitForSeconds(fadeDuration);
-        transparency = 0.0f;
-        fadeIn = false;
-        changing = false;
+    IEnumerator FadeOut()
+    {
+        float timer = 0;
+        while (material.color.a <= 1f)
+        {
+            float alpha = Mathf.Lerp(0, 1, timer / fadeDuration);
+            material.color = new Color(0, 0, 0, alpha);
+            timer += Time.deltaTime;
+            yield return null;
+        }
+        material.color = new Color(0, 0, 0, 1);
     }
 }
