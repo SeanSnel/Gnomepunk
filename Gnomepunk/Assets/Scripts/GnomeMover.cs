@@ -15,12 +15,14 @@ public class GnomeMover : MonoBehaviour, IExplodable
     public float maxSpeed = 2;
     public float MaxSpeedSqr { get; private set; }
     public LayerMask gnomeMask = 0;
+    private float startZPos;
 
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         MaxSpeedSqr = Mathf.Pow(maxSpeed, 2);
+        startZPos = transform.position.z;
     }
 
     void OnValidate()
@@ -60,7 +62,7 @@ public class GnomeMover : MonoBehaviour, IExplodable
 
         yield return new WaitForSeconds(0.25f);
 
-        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+        transform.position = new Vector3(transform.position.x, transform.position.y, startZPos);
         transform.rotation = Quaternion.identity;
         LockRigidbody();
     }
