@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4499802016730724293}
   - component: {fileID: 1226237818}
+  - component: {fileID: 342084235556512473}
   m_Layer: 0
   m_Name: pressure plate
   m_TagString: Untagged
@@ -66,6 +67,19 @@ MonoBehaviour:
   disableTriggerEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!65 &342084235556512473
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3835187521942351231}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7, y: 1, z: 1.7}
+  m_Center: {x: 5.05, y: 0.52, z: -0.05}
 --- !u!1 &7083089379782839660
 GameObject:
   m_ObjectHideFlags: 0
@@ -77,6 +91,7 @@ GameObject:
   - component: {fileID: 7676354891864202730}
   - component: {fileID: 1806275075997462727}
   - component: {fileID: 6783575509071541351}
+  - component: {fileID: 8854164432235764575}
   m_Layer: 0
   m_Name: Plate
   m_TagString: Untagged
@@ -147,6 +162,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8854164432235764575
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7083089379782839660}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 63.568913, y: 54.68032, z: 114.07329}
+  m_Center: {x: -0.0000104904175, y: 9.610051, z: 0.000003814697}
 --- !u!1 &7893226028225842578
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,6 +186,7 @@ GameObject:
   - component: {fileID: 3630297772835396339}
   - component: {fileID: 4025049511792145489}
   - component: {fileID: 2173495399846589941}
+  - component: {fileID: 2910133711277137150}
   m_Layer: 0
   m_Name: Base
   m_TagString: Untagged
@@ -228,3 +257,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2910133711277137150
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7893226028225842578}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 126.55695, y: 34.314995, z: 129.16844}
+  m_Center: {x: 0.000015258789, y: 0, z: 0}
