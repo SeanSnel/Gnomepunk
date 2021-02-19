@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modeName: Push
-  cursorTexture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
+  cursorTexture: {fileID: 2800000, guid: 6025b7498550f6243b53270b4da6a6c4, type: 3}
   backplaneMask:
     serializedVersion: 2
     m_Bits: 64
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modeName: Explode
-  cursorTexture: {fileID: 10912, guid: 0000000000000000f000000000000000, type: 0}
+  cursorTexture: {fileID: 2800000, guid: 1a5e6bd05666d7848a67140f05c5df9c, type: 3}
   backplaneMask:
     serializedVersion: 2
     m_Bits: 64

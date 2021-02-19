@@ -23,7 +23,7 @@ public class PushCursor : GameCursor
                 Collider[] gnomes = Physics.OverlapSphere(hit.point, pushRadius, interactsWithLayers);
                 for (int i = 0; i < gnomes.Length; i++)
                 {
-                    gnomes[i].GetComponent<GnomeMover>().RunAwayFrom(hit.point, pushRadius);
+                    gnomes[i].GetComponentInParent<GnomeMover>().RunAwayFrom(hit.point, pushRadius);
                 }
             }
         }
