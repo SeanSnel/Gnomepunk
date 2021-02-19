@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 7b9828f05419a754d9f6337842d66ad0
+=======
+guid: e8a644819a8f21f41a59ec4ce3fca7e4
+>>>>>>> main
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -14,12 +18,21 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+<<<<<<< HEAD
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
+=======
+    motionNodeName:
+    rigImportErrors:
+    rigImportWarnings:
+    animationImportErrors:
+    animationImportWarnings:
+    animationRetargetingWarnings:
+>>>>>>> main
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
@@ -86,7 +99,11 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
+<<<<<<< HEAD
     rootMotionBoneName: 
+=======
+    rootMotionBoneName:
+>>>>>>> main
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
@@ -97,6 +114,12 @@ ModelImporter:
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
+<<<<<<< HEAD
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+=======
+  userData:
+  assetBundleName:
+  assetBundleVariant:
+>>>>>>> main
