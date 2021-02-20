@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Lift : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Lift : MonoBehaviour
     private int _nextHeightIndex = 0;
 
     private Rigidbody rb;
+    private bool canEnd = false;
 
     public void Start()
     {
@@ -59,5 +61,21 @@ public class Lift : MonoBehaviour
             yield return null;
         }
         rb.MovePosition(targetLocation);
+    }
+
+    public void UnlockEnd()
+    {
+        canEnd = true;
+    }
+
+    public void EnqueueSceneTransition(float afterSeconds)
+    {
+        StartCoroutine(TransitionScene(afterSeconds));
+    }
+
+    private IEnumerator TransitionScene(float afterSeconds)
+    {
+        yield return new WaitForSeconds(afterSeconds);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1, LoadSceneMode.Single);
     }
 }
