@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Gnome
   - Box
+  - FadeOut
+  - SceneManager
+  - Fade Canvas
   layers:
   - Default
   - TransparentFX
