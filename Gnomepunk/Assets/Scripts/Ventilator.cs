@@ -8,10 +8,15 @@ public class Ventilator : MonoBehaviour
     public float m_damping; 
     public float m_fanForce;
     private Collider m_Collider;
+    public bool startOn;
     
     void Start()
     {
         m_Collider = GetComponent<Collider>();
+        if (!startOn)
+        {
+            turnOff();
+        }
     }
     
     public void turnOn()
