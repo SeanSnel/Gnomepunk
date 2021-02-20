@@ -11,12 +11,19 @@ public class ExplosionCursor : GameCursor
     public float maxChargeTime = 2f;
     public float overChargeTime = 3f;
 
+    public GameObject particle;
+
     private Transform charger;
     private Material chargerMaterial;
+
+    private AudioSource MpPlayer;
+
 
     // Start is called before the first frame update
     protected override void Start()
     {
+        MpPlayer = GetComponent<AudioSource>();
+        particle.GetComponent<ParticleSystem>().Stop();
         charger = GameObject.Find("Charger").transform;
         chargerMaterial = charger.GetComponent<Renderer>().material;
         base.Start();
@@ -73,6 +80,10 @@ public class ExplosionCursor : GameCursor
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit, RAYCAST_DISTANCE, backplaneMask))
         {
+            MpPlayer.Play();
+            particle.transform.position = hit.point;
+            particle.transform.localScale = new Vector3((percentage / 100) + 0.1f, (percentage / 100) + 0.1f, (percentage / 100)+0.1f);
+            particle.GetComponent<ParticleSystem>().Play();
             Collider[] explodables = Physics.OverlapSphere(hit.point, explosionRadius, interactsWithLayers);
             for (int i = 0; i < explodables.Length; i++)
             {
