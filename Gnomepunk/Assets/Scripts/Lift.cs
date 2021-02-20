@@ -8,7 +8,8 @@ public class Lift : MonoBehaviour
     [SerializeField] private float[] liftHeights;
 
     private const float PRECISION = 0.02f;
-    private int _nextHeightIndex = 0;
+    public int _nextHeightIndex = 0;
+    private Vector3 startPos;
 
     private Rigidbody rb;
     private bool canEnd = false;
@@ -16,6 +17,7 @@ public class Lift : MonoBehaviour
     public void Start()
     {
         rb = gameObject.GetComponent<Rigidbody>();
+        startPos = transform.position;
     }
 
     public void MoveLift()
@@ -35,9 +37,19 @@ public class Lift : MonoBehaviour
 
     public void moveDown()
     {
-        if (liftHeights.Length < _nextHeightIndex)
+        if (liftHeights.Length > -1)
         {
-            float nextHeight = liftHeights[_nextHeightIndex--];
+            Debug.Log("moving down");
+            float nextHeight = transform.position.y;
+            if (_nextHeightIndex > 0)
+            {
+                nextHeight = liftHeights[_nextHeightIndex--];
+            }
+            else if (_nextHeightIndex <= 0)
+            {
+                nextHeight = startPos.y;
+            }
+            
             Vector3 newPosition = transform.position;
             newPosition.y = nextHeight;
             StartCoroutine(nameof(MoveLiftToLocation), newPosition);

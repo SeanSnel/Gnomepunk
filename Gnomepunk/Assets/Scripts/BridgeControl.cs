@@ -16,10 +16,13 @@ public class BridgeControl : MonoBehaviour
     private Vector3 _startLocation;
     private Vector3 _startRotation;
 
+    private Rigidbody rb;
+
     private void Start()
     {
         _startLocation = transform.position;
         _startRotation = transform.rotation.eulerAngles;
+        rb = gameObject.GetComponent<Rigidbody>();
     }
 
     public void TriggerBridge()
@@ -54,7 +57,7 @@ public class BridgeControl : MonoBehaviour
     private void SlideOpen(Vector3 movementVector)
     {
         StopCoroutine(nameof(MoveBridgeTo));
-        Vector3 targetLocation = transform.position + movementVector;
+        Vector3 targetLocation = _startLocation + movementVector;
         StartCoroutine(MoveBridgeTo(targetLocation));
     }
 
@@ -62,7 +65,7 @@ public class BridgeControl : MonoBehaviour
     {
         while (transform.position != targetLocation)
         {
-            transform.position = Vector3.Lerp(transform.position, targetLocation, Time.deltaTime * movementSpeed);
+            rb.MovePosition(Vector3.Lerp(transform.position, targetLocation, Time.deltaTime * movementSpeed));
             yield return null;
         }
     }
