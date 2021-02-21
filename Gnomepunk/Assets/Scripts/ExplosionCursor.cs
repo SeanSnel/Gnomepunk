@@ -96,13 +96,11 @@ public class ExplosionCursor : GameCursor
     private void OverCharge()
     {
         ResetCharger();
-        Debug.Log("Overcharged");
     }
 
     private void FizzleOut()
     {
         ResetCharger();
-        Debug.Log("Fizzled Out");
     }
 
     private void ResetCharger()
