@@ -19,6 +19,9 @@ public class SceneLoader : MonoBehaviour
         StartCoroutine(LoadSceneAsync(scene));
     }
 
+    public void ReloadScene() {
+        StartCoroutine(LoadSceneAsync(SceneManager.GetActiveScene().name));
+    }
     private IEnumerator LoadSceneAsync(string scene)
     {
         GameObject fadeObj = GameObject.FindGameObjectWithTag("FadeOut");
