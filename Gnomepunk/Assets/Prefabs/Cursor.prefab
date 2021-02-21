@@ -77,10 +77,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   explosionRadius: 5
-  maxExplosionForce: 10
+  maxExplosionForce: 20
   minChargeTime: 0.5
-  maxChargeTime: 3
-  overChargeTime: 4
+  maxChargeTime: 2
+  overChargeTime: 3
   particle: {fileID: 7582042168917432966}
 --- !u!114 &3641873533406031741
 MonoBehaviour:
