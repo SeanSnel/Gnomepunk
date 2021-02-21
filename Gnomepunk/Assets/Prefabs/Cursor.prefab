@@ -60,6 +60,10 @@ MonoBehaviour:
   maxChargeTime: 2
   overChargeTime: 3
   particle: {fileID: 7582042168917432966}
+  explosion: {fileID: 8300000, guid: 8d6e6ac7c4f25a8469e20fd7fcc750ea, type: 3}
+  scream1: {fileID: 8300000, guid: af5d87597b9bab348bb49f80c1e4b96a, type: 3}
+  scream2: {fileID: 8300000, guid: 53e71e36e9a34494f974e954b63eea45, type: 3}
+  scream3: {fileID: 8300000, guid: 9da90a1fd1b689745a3ae2470aee0216, type: 3}
 --- !u!114 &3641873533406031741
 MonoBehaviour:
   m_ObjectHideFlags: 0

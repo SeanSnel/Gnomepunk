@@ -18,6 +18,11 @@ public class ExplosionCursor : GameCursor
 
     private AudioSource MpPlayer;
 
+    public AudioClip explosion;
+    public AudioClip scream1;
+    public AudioClip scream2;
+    public AudioClip scream3;
+
 
     // Start is called before the first frame update
     protected override void Start()
@@ -80,13 +85,33 @@ public class ExplosionCursor : GameCursor
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit, RAYCAST_DISTANCE, backplaneMask))
         {
-            MpPlayer.Play();
+            MpPlayer.PlayOneShot(explosion, percentage/100);
             particle.transform.position = hit.point;
             particle.transform.localScale = new Vector3((percentage / 100) + 0.1f, (percentage / 100) + 0.1f, (percentage / 100)+0.1f);
             particle.GetComponent<ParticleSystem>().Play();
             Collider[] explodables = Physics.OverlapSphere(hit.point, explosionRadius, interactsWithLayers);
             for (int i = 0; i < explodables.Length; i++)
             {
+                
+                switch (Random.Range(0, 3))
+                {
+                    case 0:
+                        Debug.Log("1");
+                        MpPlayer.PlayOneShot(scream1, 0.15f);
+                        break;
+                    case 1:
+                        Debug.Log("2");
+                        MpPlayer.PlayOneShot(scream2, 0.15f);
+                        break;
+                    case 2:
+                        Debug.Log("3");
+                        MpPlayer.PlayOneShot(scream3, 0.15f);
+                        break;
+                    default:
+                        Debug.Log("error");
+                        MpPlayer.PlayOneShot(scream1, 0.15f);
+                        break;
+                }
                 IExplodable explodable = explodables[i].GetComponent<IExplodable>();
                 explodable?.Explode(hit.point, maxExplosionForce * (percentage / 100), explosionRadius);
             }
