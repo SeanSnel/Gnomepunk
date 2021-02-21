@@ -11,4 +11,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: 4b6ff7cea04ea294b92c188b486fcd31
+  - enabled: 1
+    path: Assets/Scenes/Level_Robert.unity
+    guid: d203cc5b174165649ba2b7f520f7e675
+  - enabled: 1
+    path: Assets/Scenes/level_tim.unity
+    guid: 9eace389005c3e148a21069a9ce1da63
+  - enabled: 1
+    path: Assets/Scenes/level_tim2.unity
+    guid: 2e47a04c3efcdc743b67e40b6342193b
   m_configObjects: {}
