@@ -773,7 +773,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1226237818, guid: ff72d462b002b8c48a9d473dee49f59d, type: 3}
       propertyPath: enableTriggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1226237818, guid: ff72d462b002b8c48a9d473dee49f59d, type: 3}
       propertyPath: enableTriggerEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -817,7 +817,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1226237818, guid: ff72d462b002b8c48a9d473dee49f59d, type: 3}
       propertyPath: enableTriggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: MainScene
+      value: level_Tim2
       objectReference: {fileID: 0}
     - target: {fileID: 1226237818, guid: ff72d462b002b8c48a9d473dee49f59d, type: 3}
       propertyPath: enableTriggerEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
