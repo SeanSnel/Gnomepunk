@@ -1,6 +1,4 @@
-using System.Numerics;
 using UnityEngine;
-using Vector3 = UnityEngine.Vector3;
 
 public class CameraControl : MonoBehaviour
 {
@@ -9,13 +7,13 @@ public class CameraControl : MonoBehaviour
     public float animTime = 10f;
 
     public float leftOffset;
-    public GameObject leftBoundry;
+    public GameObject leftBoundary;
     public float rightOffset;
-    public GameObject rightBoundry;
+    public GameObject rightBoundary;
     public float upperOffset;
-    public GameObject upperBoundry;
+    public GameObject upperBoundary;
     public float underOffset;
-    public GameObject underBoundry;
+    public GameObject underBoundary;
 
     private GameObject _cam;
     private Vector3 _targetPos;
@@ -32,38 +30,37 @@ public class CameraControl : MonoBehaviour
         Vector3 horizontalMovement = transform.right * (Input.GetAxis("Horizontal") * horizontalSpeed);
         Vector3 verticalMovement = transform.up * (Input.GetAxis("Vertical") * verticalSpeed);
         _targetPos = horizontalMovement + verticalMovement + transform.position;
-        checkPosition();
+        CheckPosition();
         _cam.transform.position = Vector3.Lerp(_cam.transform.position, _targetPos, (animTime * Time.deltaTime));
     }
 
-    private void checkPosition() {
-        if (upperBoundry != null)
+    private void CheckPosition() {
+        if (upperBoundary != null)
         {
-            if (_targetPos.y + upperOffset > upperBoundry.transform.position.y)
+            if (_targetPos.y + upperOffset > upperBoundary.transform.position.y)
             {
-                transform.position = new Vector3(_targetPos.x, upperBoundry.transform.position.y - upperOffset, _targetPos.z);
+                transform.position = new Vector3(_targetPos.x, upperBoundary.transform.position.y - upperOffset, _targetPos.z);
             }
         }
-        if (underBoundry != null)
+        if (underBoundary != null)
         {
-            if (_targetPos.y - underOffset < underBoundry.transform.position.y)
+            if (_targetPos.y - underOffset < underBoundary.transform.position.y)
             {
-                _targetPos = new Vector3(_targetPos.x, underBoundry.transform.position.y + underOffset, _targetPos.z);
+                _targetPos = new Vector3(_targetPos.x, underBoundary.transform.position.y + underOffset, _targetPos.z);
             }
         }
-        if (leftBoundry != null)
+        if (leftBoundary != null)
         {
-            if (_targetPos.x - leftOffset < leftBoundry.transform.position.x)
+            if (_targetPos.x - leftOffset < leftBoundary.transform.position.x)
             {
-                _targetPos = new Vector3(leftBoundry.transform.position.x + leftOffset, _targetPos.y, _targetPos.z);
+                _targetPos = new Vector3(leftBoundary.transform.position.x + leftOffset, _targetPos.y, _targetPos.z);
             }
         }
-        if (rightBoundry != null)
+
+        if (rightBoundary == null) return;
+        if (_targetPos.x + rightOffset > rightBoundary.transform.position.x)
         {
-            if (_targetPos.x + rightOffset > rightBoundry.transform.position.x)
-            {
-                _targetPos = new Vector3(rightBoundry.transform.position.x - rightOffset, _targetPos.y, _targetPos.z);
-            }
+            _targetPos = new Vector3(rightBoundary.transform.position.x - rightOffset, _targetPos.y, _targetPos.z);
         }
     }
 }

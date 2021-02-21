@@ -5,15 +5,18 @@ using UnityEngine;
 public class Ventilator : MonoBehaviour
 {
     // Hoe hoger de dampening hoe sneller de "collided iets" op de y as van de ventilator collider blijft hangen
-    private float m_damping; 
-    private float m_fanForce;
+    public float m_damping; 
+    public float m_fanForce;
     private Collider m_Collider;
+    public bool startOn;
     
     void Start()
     {
-        m_damping = 1f;
-        m_fanForce = 20f;
         m_Collider = GetComponent<Collider>();
+        if (!startOn)
+        {
+            turnOff();
+        }
     }
     
     public void turnOn()
