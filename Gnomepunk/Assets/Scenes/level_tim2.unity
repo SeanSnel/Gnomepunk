@@ -1916,7 +1916,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8503730148047685386, guid: c3c9d8945ef1ceb418f6c63dfe03e062, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8503730148047685386, guid: c3c9d8945ef1ceb418f6c63dfe03e062, type: 3}
       propertyPath: m_LocalScale.x
@@ -9044,18 +9044,6 @@ PrefabInstance:
     - target: {fileID: 3641873533406031489, guid: 55ce55e4c50c2314dbaf71417657a6bb, type: 3}
       propertyPath: m_Name
       value: Cursor
-      objectReference: {fileID: 0}
-    - target: {fileID: 3641873533406031740, guid: 55ce55e4c50c2314dbaf71417657a6bb, type: 3}
-      propertyPath: maxChargeTime
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3641873533406031740, guid: 55ce55e4c50c2314dbaf71417657a6bb, type: 3}
-      propertyPath: overChargeTime
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3641873533406031740, guid: 55ce55e4c50c2314dbaf71417657a6bb, type: 3}
-      propertyPath: maxExplosionForce
-      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3641873533406031743, guid: 55ce55e4c50c2314dbaf71417657a6bb, type: 3}
       propertyPath: m_RootOrder

@@ -1534,18 +1534,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cursor
       objectReference: {fileID: 0}
-    - target: {fileID: 3641873533406031740, guid: 55ce55e4c50c2314dbaf71417657a6bb, type: 3}
-      propertyPath: maxChargeTime
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3641873533406031740, guid: 55ce55e4c50c2314dbaf71417657a6bb, type: 3}
-      propertyPath: overChargeTime
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3641873533406031740, guid: 55ce55e4c50c2314dbaf71417657a6bb, type: 3}
-      propertyPath: maxExplosionForce
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 3641873533406031743, guid: 55ce55e4c50c2314dbaf71417657a6bb, type: 3}
       propertyPath: m_RootOrder
       value: 11
