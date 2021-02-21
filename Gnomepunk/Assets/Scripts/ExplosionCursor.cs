@@ -97,19 +97,19 @@ public class ExplosionCursor : GameCursor
                 {
                     case 0:
                         Debug.Log("1");
-                        MpPlayer.PlayOneShot(scream1, 0.25f);
+                        MpPlayer.PlayOneShot(scream1, 0.15f);
                         break;
                     case 1:
                         Debug.Log("2");
-                        MpPlayer.PlayOneShot(scream2, 0.25f);
+                        MpPlayer.PlayOneShot(scream2, 0.15f);
                         break;
                     case 2:
                         Debug.Log("3");
-                        MpPlayer.PlayOneShot(scream3, 0.25f);
+                        MpPlayer.PlayOneShot(scream3, 0.15f);
                         break;
                     default:
                         Debug.Log("error");
-                        MpPlayer.PlayOneShot(scream1, 0.25f);
+                        MpPlayer.PlayOneShot(scream1, 0.15f);
                         break;
                 }
                 IExplodable explodable = explodables[i].GetComponent<IExplodable>();
