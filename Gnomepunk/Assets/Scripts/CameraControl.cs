@@ -29,7 +29,7 @@ public class CameraControl : MonoBehaviour
     {
         Vector3 horizontalMovement = transform.right * (Input.GetAxis("Horizontal") * horizontalSpeed);
         Vector3 verticalMovement = transform.up * (Input.GetAxis("Vertical") * verticalSpeed);
-        _targetPos = Vector3.ClampMagnitude(horizontalMovement + verticalMovement + transform.position, Mathf.Max(horizontalSpeed, verticalSpeed));
+        _targetPos = horizontalMovement + verticalMovement + transform.position;
         CheckPosition();
         _cam.transform.position = Vector3.Lerp(_cam.transform.position, _targetPos, (animTime * Time.deltaTime));
     }
