@@ -32,27 +32,25 @@ public class GnomeMover : MonoBehaviour, IExplodable
     {
         Vector3 rbVelocity = _rb.velocity;
         Vector3 startEuler = _startRotation.eulerAngles;
-        if (_grounded)
+        if (!_grounded) return;
+        if (rbVelocity.x > 0.1)
         {
-            if (rbVelocity.x > 0.1)
-            {
-                transform.rotation = Quaternion.Euler(startEuler.x, startEuler.y - 90, startEuler.z);
-                _animator.SetBool("Running", true);
-            }
-            else if (rbVelocity.x < -0.1)
-            {
-                transform.rotation = Quaternion.Euler(startEuler.x, startEuler.y + 90, startEuler.z);
-                _animator.SetBool("Running", true);
-            }
-            else
-            {
-                transform.rotation = _startRotation;
-                _animator.SetBool("Running", false);
-            }
+            transform.rotation = Quaternion.Euler(startEuler.x, startEuler.y - 90, startEuler.z);
+            _animator.SetBool("Running", true);
+        }
+        else if (rbVelocity.x < -0.1)
+        {
+            transform.rotation = Quaternion.Euler(startEuler.x, startEuler.y + 90, startEuler.z);
+            _animator.SetBool("Running", true);
+        }
+        else
+        {
+            transform.rotation = _startRotation;
+            _animator.SetBool("Running", false);
         }
     }
 
-    void OnValidate()
+    private void OnValidate()
     {
         MaxSpeedSqr = Mathf.Pow(maxSpeed, 2);
     }
