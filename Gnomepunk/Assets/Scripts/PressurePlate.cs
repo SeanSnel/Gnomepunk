@@ -9,6 +9,7 @@ public class PressurePlate : MonoBehaviour
     public int currentAmount;
 
     public bool toggle = false;
+    public bool isLevelSwitch = false;
 
     public UnityEvent enableTriggerEvent;
     public UnityEvent disableTriggerEvent;
@@ -40,7 +41,14 @@ public class PressurePlate : MonoBehaviour
             if (currentAmount >= requiredAmount && !isActivated)
             {
                 isActivated = true;
+                if (enableTriggerEvent == null || isLevelSwitch)
+                {
+                    Debug.Log("Unknown or empty trigger event");
+                    GameObject.FindGameObjectWithTag("SceneManager").GetComponent<SceneLoader>().LoadNextLevel();
+                    return;
+                }
                 enableTriggerEvent.Invoke();
+                Debug.Log("Did the thing");
             }
         }
     }

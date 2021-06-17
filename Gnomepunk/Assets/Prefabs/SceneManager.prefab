@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeTime: 3
+  selectedLevel: 3
 --- !u!114 &2828219138243022564
 MonoBehaviour:
   m_ObjectHideFlags: 0
