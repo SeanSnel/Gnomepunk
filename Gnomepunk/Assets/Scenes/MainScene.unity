@@ -182,7 +182,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'The lift should be working now, take your gnomes to the next level!
 
-'
+
+    If
+    you''re really lost, press ''R'' to reset.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1410,6 +1412,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1226237818, guid: ff72d462b002b8c48a9d473dee49f59d, type: 3}
+      propertyPath: requiredAmount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1226237818, guid: ff72d462b002b8c48a9d473dee49f59d, type: 3}
       propertyPath: enableTriggerEvent.m_PersistentCalls.m_Calls.Array.size
       value: 1
