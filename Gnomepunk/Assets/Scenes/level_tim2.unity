@@ -279,6 +279,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8665744679060871047, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
+      propertyPath: lavaStartDelay
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8665744679060871047, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
+      propertyPath: lavaRaisingSpeed
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 8665744679077178569, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.014
@@ -2642,6 +2650,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8665744679060871047, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
+      propertyPath: lavaStartDelay
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8665744679060871047, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
+      propertyPath: lavaRaisingSpeed
+      value: 0.03
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
 --- !u!1001 &329937636
@@ -2867,6 +2883,14 @@ PrefabInstance:
     - target: {fileID: 8665744679060871046, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8665744679060871047, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
+      propertyPath: lavaStartDelay
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8665744679060871047, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
+      propertyPath: lavaRaisingSpeed
+      value: 0.03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
@@ -4587,6 +4611,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8665744679060871047, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
+      propertyPath: lavaStartDelay
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8665744679060871047, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
+      propertyPath: lavaRaisingSpeed
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 8665744679077178569, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.014
@@ -4712,6 +4744,14 @@ PrefabInstance:
     - target: {fileID: 8665744679060871046, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8665744679060871047, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
+      propertyPath: lavaStartDelay
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8665744679060871047, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
+      propertyPath: lavaRaisingSpeed
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 8665744679077178569, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5367,6 +5407,86 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e5a676d959dc134b83b31d0ca06721d, type: 3}
+--- !u!1001 &705256541
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2358174715486220419, guid: ceef28ca2f681e04c9a360a8e60c22b4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527101036085038060, guid: ceef28ca2f681e04c9a360a8e60c22b4, type: 3}
+      propertyPath: m_RootOrder
+      value: 220
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527101036085038060, guid: ceef28ca2f681e04c9a360a8e60c22b4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527101036085038060, guid: ceef28ca2f681e04c9a360a8e60c22b4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 14.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527101036085038060, guid: ceef28ca2f681e04c9a360a8e60c22b4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527101036085038060, guid: ceef28ca2f681e04c9a360a8e60c22b4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6945549
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527101036085038060, guid: ceef28ca2f681e04c9a360a8e60c22b4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.69455504
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527101036085038060, guid: ceef28ca2f681e04c9a360a8e60c22b4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.13264023
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527101036085038060, guid: ceef28ca2f681e04c9a360a8e60c22b4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.13264021
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527101036085038060, guid: ceef28ca2f681e04c9a360a8e60c22b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -68.377
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527101036085038060, guid: ceef28ca2f681e04c9a360a8e60c22b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527101036085038060, guid: ceef28ca2f681e04c9a360a8e60c22b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4303496314742804822, guid: ceef28ca2f681e04c9a360a8e60c22b4, type: 3}
+      propertyPath: m_Name
+      value: rail_kapot (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2358174715486220419, guid: ceef28ca2f681e04c9a360a8e60c22b4, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: ceef28ca2f681e04c9a360a8e60c22b4, type: 3}
+--- !u!1 &705256542 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4303496314742804822, guid: ceef28ca2f681e04c9a360a8e60c22b4, type: 3}
+  m_PrefabInstance: {fileID: 705256541}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &705256543
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705256542}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.95, y: 2.3752153, z: 0.1}
+  m_Center: {x: -2.5, y: -0.00000015229374, z: 0.03}
 --- !u!1001 &710749402
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5588,6 +5708,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8665744679060871047, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
+      propertyPath: lavaStartDelay
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8665744679060871047, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
+      propertyPath: lavaRaisingSpeed
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 8665744679077178569, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.014
@@ -5661,6 +5789,14 @@ PrefabInstance:
     - target: {fileID: 8665744679060871046, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8665744679060871047, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
+      propertyPath: lavaStartDelay
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8665744679060871047, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
+      propertyPath: lavaRaisingSpeed
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 8665744679077178569, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6230,6 +6366,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8665744679060871047, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
+      propertyPath: lavaStartDelay
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8665744679060871047, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
+      propertyPath: lavaRaisingSpeed
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 8665744679077178569, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.014
@@ -6680,6 +6824,14 @@ PrefabInstance:
     - target: {fileID: 8665744679060871046, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8665744679060871047, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
+      propertyPath: lavaStartDelay
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8665744679060871047, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
+      propertyPath: lavaRaisingSpeed
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 8665744679077178569, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9805,7 +9957,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1229129524}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.02, y: 1.98, z: -7.54}
+  m_LocalPosition: {x: 1.02, y: 1.98, z: -8.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 515189344}
@@ -10129,6 +10281,14 @@ PrefabInstance:
     - target: {fileID: 8665744679060871046, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8665744679060871047, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
+      propertyPath: lavaStartDelay
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8665744679060871047, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
+      propertyPath: lavaRaisingSpeed
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 8665744679077178569, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11922,6 +12082,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8665744679060871047, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
+      propertyPath: lavaStartDelay
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8665744679060871047, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
+      propertyPath: lavaRaisingSpeed
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 8665744679077178569, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.014
@@ -12906,6 +13074,14 @@ PrefabInstance:
     - target: {fileID: 8665744679060871046, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8665744679060871047, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
+      propertyPath: lavaStartDelay
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8665744679060871047, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
+      propertyPath: lavaRaisingSpeed
+      value: 0.03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
@@ -15037,6 +15213,14 @@ PrefabInstance:
     - target: {fileID: 8665744679060871046, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8665744679060871047, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
+      propertyPath: lavaStartDelay
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8665744679060871047, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
+      propertyPath: lavaRaisingSpeed
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 8665744679077178569, guid: c576dc41a7a1c8440ba4657f8a69562c, type: 3}
       propertyPath: m_LocalPosition.z
